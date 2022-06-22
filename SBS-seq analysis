@@ -1,1 +1,7 @@
-
+1) preliminary statistics and quality optimization of sequencing reads were determined;
+2) PANDAseq assembled overlapping paired-end reads while correcting mismatches and uncalled bases, and counted the reads sequence length distribution and plotted those data;
+3) target 55 bp sequences were extracted by following the upstream and downstream conserved sequences of the target segment, while counting the length, abundance, and proportion of each sequence in the target segment;
+4) sequencing reads were aligned to the original 55 bp sequence with the Burrows-Wheeler Aligner (BWA) tool; 
+5) base distribution and indel statistics were determined at each site based on the alignment results; 
+6) the target 10 bp random N-sequences were extracted according to the constant regions and sequencing and abundance statistics were determined.
+The reads with gaps or mismatches at the non-random sequences were determined to be errors and removed from the analysis. For the remaining sequences, the 10 bp random sequences were extracted and the occupancy of canonical base (A) and non-canonical bases (B) was calculated. The same analysis was performed for the sequencing of the original library with the occupancy of canonical base and non-canonical bases expressed as α or β, respectively. The enrichment score R value for all bases at every position was calculated as the ratio R = (A / B)/(α / β). A similar analysis was carried out for the core 4-base enrichment.
